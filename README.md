@@ -1,2 +1,2 @@
-# java-course
-Code for Java students
+# Java course
+Code from classes for Java students
