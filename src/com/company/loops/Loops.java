@@ -22,6 +22,15 @@ public class Loops {
             y++;
         } while (y < 10);
 
+        int [] someDigits = {5,6,3,1,6,7};
 
+        for (int current : someDigits) {
+            System.out.println(current);
+        }
+
+        for (int j = 0; j < someDigits.length; j++) {
+            int current = someDigits[j];
+            System.out.println(current);
+        }
     }
 }
