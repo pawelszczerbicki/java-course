@@ -8,8 +8,12 @@ public class Methods {
         int b=2;
         addAndPrint(1, 2);
         System.out.println(sum(1, 2));
-
         int someSum = sum(sum(a,b), sum(a,b));
+
+        int [] oneDimension = {};
+        int [][] twoDimension = {};
+        printArray(oneDimension);
+        printArray(twoDimension);
 
     }
 
@@ -34,5 +38,35 @@ public class Methods {
         return a + b;
     }
 
+    void print(String  test){
+        System.out.println(test);
+    }
+
+    void print(int test){
+        System.out.println(test);
+    }
+
+    //metoda przeladowana rozni się przyjmowamymi parametrami lub ich kolejnoscia
+    void printArray(int [] toPrint){
+        for (int value : toPrint) {
+            System.out.println(value);
+        }
+    }
+
+    void printArray(int [][] toPrint){
+        for (int[] values : toPrint) {
+            // wyswietlajac tablice dwuwymiarowa mozemy
+            //X razy wyswietlic tablice jednowymiarowa
+            printArray(values);
+        }
+    }
+
+
+    void test(String a, int b){
+    }
+
+    void  test (int b, String a){
+
+    }
 
 }
