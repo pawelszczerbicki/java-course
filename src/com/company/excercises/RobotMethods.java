@@ -1,9 +1,9 @@
 package com.company.excercises;
 
 public class RobotMethods {
-    private int SLOTS_DEFAULT_SIZE = 10;
+    private int SLOTS_AMOUNT = 10;
     private int SLOTS_CAPACITY = 15;
-    private int[] slots = new int[SLOTS_DEFAULT_SIZE];
+    private int[] slots = new int[SLOTS_AMOUNT];
     private boolean robotHoldsBlock = false;
     private int position = 0;
 
@@ -18,6 +18,10 @@ public class RobotMethods {
         return slots;
     }
 
+    public void moveArmToPosition(int position) {
+        if (position < SLOTS_AMOUNT)
+            this.position = position;
+    }
 
     private void serviceLower() {
         if (robotHoldsBlock && slots[position] < SLOTS_CAPACITY) {
@@ -27,7 +31,7 @@ public class RobotMethods {
     }
 
     private void serviceMove() {
-        if (position < SLOTS_DEFAULT_SIZE)
+        if (position < SLOTS_AMOUNT)
             position++;
 
     }
