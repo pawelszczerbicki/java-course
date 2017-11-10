@@ -16,9 +16,10 @@ public class InheritanceMain {
 
 
     public static void makeSomeSound(Animal a){
+//        Dog.class.isAssignableFrom(a.getClass());
         if(a instanceof Dog){
             System.out.print("I'm dog ----");
-            Dog d = (Dog) a;
+            Dog d = (Dog) a;  // rzutowanie
             System.out.print("my race is " + d.getBreed() + " ");
         }
         a.makeSound();

@@ -35,5 +35,19 @@ public class Conditions {
             System.out.println("i was NOT at work");
 
 
+        if(1>2) System.out.println("1");
+        else System.out.println("2");
+
+        int c = 0;
+
+        //wersja 1
+        if (1 > 2) c = 1;
+        else c = 2;
+
+        //wersja 2
+        c = 1>2 ? 1 : 2;
+
+        //wersja 1 = wersja 2
+
     }
 }
